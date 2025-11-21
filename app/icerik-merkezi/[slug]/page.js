@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { getBlogBySlug } from '../blog-data';
 
-export default function BlogDetailPage() {
+function BlogDetailContent() {
     const params = useParams();
     const searchParams = useSearchParams();
     const slug = params.slug;
@@ -234,6 +234,25 @@ export default function BlogDetailPage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+export default function BlogDetailPage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen bg-[#F9FAFB] py-12">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center">
+                        <div className="animate-pulse">
+                            <div className="h-12 bg-gray-200 rounded w-64 mx-auto mb-4"></div>
+                            <div className="h-6 bg-gray-200 rounded w-96 mx-auto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }>
+            <BlogDetailContent />
+        </Suspense>
     );
 }
 

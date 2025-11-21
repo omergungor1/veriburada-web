@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { getBlogsByType } from './blog-data';
@@ -30,7 +30,7 @@ const getTypeColor = (type) => {
   }
 };
 
-export default function IcerikMerkeziPage() {
+function IcerikMerkeziContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [activeTab, setActiveTab] = useState('all');
@@ -127,6 +127,25 @@ export default function IcerikMerkeziPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function IcerikMerkeziPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[#F9FAFB] py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="animate-pulse">
+              <div className="h-12 bg-gray-200 rounded w-64 mx-auto mb-4"></div>
+              <div className="h-6 bg-gray-200 rounded w-96 mx-auto mb-12"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }>
+      <IcerikMerkeziContent />
+    </Suspense>
   );
 }
 
