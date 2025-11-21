@@ -37,7 +37,7 @@ export default function Header() {
               Ana Sayfa
             </Link>
             <Link href="/pricing" className="text-gray-700 hover:text-[#1A73E8] transition-colors">
-              Pricing
+              Fiyatlandırma
             </Link>
             <Link href="/icerik-merkezi" className="text-gray-700 hover:text-[#1A73E8] transition-colors">
               İçerik Merkezi
@@ -86,7 +86,7 @@ export default function Header() {
               Ana Sayfa
             </Link>
             <Link href="/pricing" className="block text-gray-700 hover:text-[#1A73E8]">
-              Pricing
+              Fiyatlandırma
             </Link>
             <Link href="/icerik-merkezi" className="block text-gray-700 hover:text-[#1A73E8]">
               İçerik Merkezi

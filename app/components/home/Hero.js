@@ -3,24 +3,21 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const typewriterTexts = [
-  "İstanbul'daki çilingir listesi...",
-  "Ankara'daki eczaneler listesi...",
-  "Türkiye'deki restoran listesi...",
-  "İzmir'deki nalburlar...",
-  "Antalya'daki beyaz eşya servisleri...",
+const businessData = [
+  { text: "İstanbul çilingir listesi...", count: 894 },
+  { text: "Ankara eczaneler listesi...", count: 1.245 },
+  { text: "Türkiye restoranlar listesi...", count: 51.203 },
+  { text: "İzmir nalburcular listesi...", count: 567 },
+  { text: "Antalya beyaz eşya servisleri...", count: 892 },
 ];
-
-const businessCounts = [694, 245, 1203, 567, 892, 1345];
 
 export default function Hero() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const [currentCount, setCurrentCount] = useState(0);
 
   useEffect(() => {
-    const text = typewriterTexts[currentTextIndex];
+    const text = businessData[currentTextIndex].text;
     let timeout;
 
     if (!isDeleting && displayText.length < text.length) {
@@ -35,18 +32,11 @@ export default function Hero() {
       }, 50);
     } else if (isDeleting && displayText.length === 0) {
       setIsDeleting(false);
-      setCurrentTextIndex((prev) => (prev + 1) % typewriterTexts.length);
+      setCurrentTextIndex((prev) => (prev + 1) % businessData.length);
     }
 
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, currentTextIndex]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentCount((prev) => (prev + 1) % businessCounts.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="relative bg-gradient-to-br from-[#E3F2FD] to-white py-20 lg:py-32 overflow-hidden">
@@ -60,12 +50,12 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#111827] mb-6 leading-tight">
-            Google Haritalardaki İşletme Verilerini<br />
+            Google İşletme Listesini<br />
             <span className="text-[#1A73E8]">1 Gün İçinde</span> Teslim Ediyoruz
           </h1>
 
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Türkiye'nin en kapsamlı işletme veri platformu. 1.7M+ konum, telefon numarası ve iletişim bilgilerine anında erişin.
+            Google Haritalar'daki milyonlarca işletmeyi elde edin. Türkiye genelinde 2M+ işletme verisi, telefon numarası ve iletişim bilgilerine tek tıkla erişin. Hızlı, güncel ve doğru verilerle işinizi büyütün.
           </p>
 
           {/* Typewriter Effect */}
@@ -79,7 +69,7 @@ export default function Hero() {
           {/* Dynamic Business Count */}
           <div className="mb-8 inline-block bg-white px-6 py-3 rounded-full shadow-lg">
             <p className="text-lg text-gray-700">
-              <span className="font-bold text-[#1A73E8]">{businessCounts[currentCount]}</span> işletme bulundu
+              <span className="font-bold text-[#1A73E8]">{businessData[currentTextIndex].count}</span> işletme bulundu
             </p>
           </div>
 
@@ -87,15 +77,25 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="https://app.veriburada.com/register"
-              className="bg-[#FF6F00] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#E65100] transition-colors shadow-lg hover:shadow-xl"
+              className="group bg-[#FF6F00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#E65100] transition-all shadow-lg hover:shadow-xl flex items-center gap-3 relative overflow-hidden"
             >
-              100 Hediye Kredi ile Hemen Başla
+              <span>100 Hediye Kredi ile Hemen Başla</span>
+              <span className="w-8 h-8 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
+                <svg className="w-4 h-4 text-[#FF6F00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
             </Link>
             <Link
               href="/pricing"
-              className="bg-white text-[#1A73E8] px-8 py-4 rounded-lg font-semibold text-lg border-2 border-[#1A73E8] hover:bg-[#E3F2FD] transition-colors"
+              className="group bg-white text-[#1A73E8] px-8 py-4 rounded-full font-semibold text-lg border-2 border-[#1A73E8] hover:bg-[#E3F2FD] transition-all shadow-lg hover:shadow-xl flex items-center gap-3 relative overflow-hidden"
             >
-              Fiyatları Gör
+              <span>Fiyatları Gör</span>
+              <span className="w-8 h-8 rounded-full bg-[#1A73E8] flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
             </Link>
           </div>
         </div>

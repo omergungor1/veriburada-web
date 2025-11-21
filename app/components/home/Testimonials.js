@@ -130,8 +130,8 @@ export default function Testimonials() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`transition-all duration-300 ${index === currentIndex
-                      ? 'w-10 h-3 bg-[#1A73E8] rounded-full'
-                      : 'w-3 h-3 bg-gray-300 rounded-full hover:bg-gray-400'
+                    ? 'w-10 h-3 bg-[#1A73E8] rounded-full'
+                    : 'w-3 h-3 bg-gray-300 rounded-full hover:bg-gray-400'
                     }`}
                   aria-label={`Testimonial ${index + 1}`}
                 />

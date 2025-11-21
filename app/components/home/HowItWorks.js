@@ -57,7 +57,7 @@ export default function HowItWorks() {
                 )}
               </div>
               {step.number < steps.length && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#1A73E8] transform -translate-y-1/2">
+                <div className="hidden lg:block absolute top-1/2 -right-7 w-6 h-0.5 bg-[#1A73E8] transform -translate-y-1/2">
                   <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-[#1A73E8] border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
                 </div>
               )}
@@ -67,7 +67,7 @@ export default function HowItWorks() {
         <div className="text-center mt-12">
           <Link
             href="https://app.veriburada.com/register"
-            className="inline-block bg-[#FF6F00] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#E65100] transition-colors shadow-lg"
+            className="inline-block bg-[#FF6F00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#E65100] transition-colors shadow-lg hover:shadow-xl"
           >
             Ücretsiz 100 kredi ile hemen başla
           </Link>

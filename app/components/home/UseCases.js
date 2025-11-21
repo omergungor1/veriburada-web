@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 
 const useCases = [
   {
-    title: 'Lead Generation',
-    description: 'Potansiyel müşterilerinize hızlıca ulaşın ve satış kanallarınızı genişletin.',
+    title: 'Toplu Müşteri Erişimi',
+    description: 'Binlerce işletmenin telefon, adres ve iletişim bilgilerine tek seferde erişin. Pazarlama kampanyalarınız için geniş bir veri tabanı oluşturun.',
     icon: (
       <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -14,8 +14,8 @@ const useCases = [
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
-    title: 'Competitive Analysis',
-    description: 'Rakip analizi yapın ve pazardaki konumunuzu güçlendirin.',
+    title: 'Rekabet Analizi',
+    description: 'Sektörünüzdeki tüm işletmeleri topluca analiz edin. Rakip sayısı, dağılım ve pazar yoğunluğunu kolayca görün.',
     icon: (
       <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -24,21 +24,21 @@ const useCases = [
     gradient: 'from-purple-500 to-pink-500',
   },
   {
-    title: 'Market Research',
-    description: 'Pazar araştırması yapın ve iş fırsatlarını keşfedin.',
+    title: 'Coğrafi Pazar Analizi',
+    description: 'İl, ilçe ve bölge bazında işletme dağılımını görün. Yeni şube açmak veya pazara girmek için en uygun lokasyonları belirleyin.',
     icon: (
       <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
       </svg>
     ),
     gradient: 'from-green-500 to-emerald-500',
   },
   {
-    title: 'Local SEO Optimizasyonu',
-    description: 'Yerel SEO stratejinizi güçlendirin ve Google\'da üst sıralarda yer alın.',
+    title: 'CRM ve Veri Tabanı Entegrasyonu',
+    description: 'Toplu işletme verilerini CRM sisteminize aktarın. Müşteri yönetimi, segmentasyon ve otomatik pazarlama için hazır veri tabanı oluşturun.',
     icon: (
       <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
       </svg>
     ),
     gradient: 'from-orange-500 to-red-500',
@@ -89,10 +89,10 @@ export default function UseCases() {
         <div className={`transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4 drop-shadow-lg">
-            Google Maps Scraping Kullanım Alanları
+            Google İşletme Profillerini Topluca Elde Etmenin Faydaları
           </h2>
           <p className="text-center text-white/90 mb-12 max-w-2xl mx-auto text-lg">
-            Veriburada verilerini farklı sektörlerde ve amaçlarda kullanabilirsiniz.
+            Milyonlarca Google işletme profil bilgisini topluca analiz ederek işinizi büyütün, pazarlama stratejilerinizi güçlendirin ve rekabet avantajı kazanın.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function UseCases() {
           {useCases.map((useCase, index) => (
             <div
               key={index}
-              className={`transform transition-all duration-700 ${isVisible
+              className={`transform transition-all duration-700 h-full ${isVisible
                 ? 'opacity-100 translate-y-0 scale-100'
                 : 'opacity-0 translate-y-10 scale-95'
                 }`}
@@ -108,7 +108,7 @@ export default function UseCases() {
                 transitionDelay: `${index * 150}ms`,
               }}
             >
-              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 group">
+              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 group h-full flex flex-col">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${useCase.gradient} text-white mb-4 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
                   <div className="transform group-hover:scale-110 transition-transform duration-300">
                     {useCase.icon}
@@ -117,7 +117,7 @@ export default function UseCases() {
                 <h3 className="text-xl font-semibold text-[#111827] mb-3 group-hover:text-[#1A73E8] transition-colors">
                   {useCase.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">
+                <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors flex-1">
                   {useCase.description}
                 </p>
               </div>
