@@ -82,7 +82,7 @@ export default function KategoriPage({ params }) {
 
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
             <h2 className="text-2xl font-semibold text-[#111827] mb-4">Türkiye Genelindeki İşletme Sayısı</h2>
-            <div className="text-4xl font-bold text-[#1A73E8] mb-2">
+            <div className="text-4xl font-bold text-[#7BC87B] mb-2">
               {data.businessCount.toLocaleString()}+
             </div>
             <p className="text-gray-600">işletme</p>
@@ -100,7 +100,7 @@ export default function KategoriPage({ params }) {
                 <a
                   key={city}
                   href={`/sehir/${city.toLowerCase()}/${params.slug}`}
-                  className="bg-[#E3F2FD] text-[#1A73E8] px-4 py-2 rounded-lg hover:bg-[#1A73E8] hover:text-white transition-colors"
+                  className="bg-[#E8F8E8] text-[#7BC87B] px-4 py-2 rounded-lg hover:bg-[#7BC87B] hover:text-white transition-colors"
                 >
                   {city}
                 </a>
@@ -123,7 +123,7 @@ export default function KategoriPage({ params }) {
           <div className="text-center">
             <a
               href="https://app.veriburada.com/register"
-              className="inline-block bg-[#FF6F00] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#E65100] transition-colors shadow-lg"
+              className="inline-block bg-[#7BC87B] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#5FA85F] transition-colors shadow-lg"
             >
               Hemen Sipariş Oluştur
             </a>

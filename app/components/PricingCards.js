@@ -33,7 +33,7 @@ const pricingPlans = [
       '1 günde veri teslim',
     ],
     nonRefundable: true,
-    bgColor: 'bg-blue-50',
+    bgColor: 'bg-green-50',
     popular: true,
     campaignCode: 'PKG2500',
   },

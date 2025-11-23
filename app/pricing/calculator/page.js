@@ -47,11 +47,11 @@ const DataPricingCalculator = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+        <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 p-6">
             <div className="max-w-6xl mx-auto">
                 <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
                     <div className="flex items-center gap-3 mb-6">
-                        <Calculator className="w-8 h-8 text-indigo-600" />
+                        <Calculator className="w-8 h-8 text-green-600" />
                         <h1 className="text-3xl font-bold text-gray-800">Kredi Hesaplama</h1>
                     </div>
 
@@ -59,7 +59,7 @@ const DataPricingCalculator = () => {
                         {/* İl Sayısı */}
                         <div>
                             <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
-                                <MapPin className="w-5 h-5 text-indigo-600" />
+                                <MapPin className="w-5 h-5 text-green-600" />
                                 İl Sayısı: {ilSayisi} {ilSayisi === MAX_IL && "(Tüm Türkiye)"}
                             </label>
                             <input
@@ -68,7 +68,7 @@ const DataPricingCalculator = () => {
                                 max={MAX_IL}
                                 value={ilSayisi}
                                 onChange={(e) => setIlSayisi(parseInt(e.target.value))}
-                                className="w-full h-2 bg-indigo-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"
                             />
                             <div className="flex justify-between text-xs text-gray-500 mt-1">
                                 <span>1</span>
@@ -79,7 +79,7 @@ const DataPricingCalculator = () => {
                         {/* Keyword Sayısı */}
                         <div>
                             <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
-                                <Hash className="w-5 h-5 text-indigo-600" />
+                                <Hash className="w-5 h-5 text-green-600" />
                                 Anahtar Kelime Sayısı: {keywordSayisi}
                             </label>
                             <input
@@ -88,7 +88,7 @@ const DataPricingCalculator = () => {
                                 max="10"
                                 value={keywordSayisi}
                                 onChange={(e) => setKeywordSayisi(parseInt(e.target.value))}
-                                className="w-full h-2 bg-indigo-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"
                             />
                             <div className="flex justify-between text-xs text-gray-500 mt-1">
                                 <span>1</span>
@@ -98,7 +98,7 @@ const DataPricingCalculator = () => {
                     </div>
 
                     {/* Kredi Gösterimi */}
-                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-8 text-center text-white">
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-8 text-center text-white">
                         <div className="text-sm font-semibold mb-2 opacity-90">TOPLAM KREDİ</div>
                         <div className="text-5xl font-bold mb-2">{krediAdedi.toLocaleString('tr-TR')}</div>
                         <div className="text-sm opacity-80">
@@ -111,7 +111,7 @@ const DataPricingCalculator = () => {
                 <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
                     <h2 className="text-xl font-bold text-gray-800 mb-4">📐 Fiyatlandırma Formülü</h2>
                     <div className="space-y-3 text-gray-700">
-                        <div className="bg-blue-50 p-4 rounded-lg">
+                        <div className="bg-green-50 p-4 rounded-lg">
                             <p className="font-mono text-sm mb-2">
                                 <strong>Temel Fiyat:</strong> 400 ₺ (1 il, 1 keyword)
                             </p>
@@ -164,7 +164,7 @@ const DataPricingCalculator = () => {
                                 }}
                             >
                                 <div className="text-xs text-gray-600 mb-2">{scenario.label}</div>
-                                <div className="text-2xl font-bold text-indigo-600">
+                                <div className="text-2xl font-bold text-green-600">
                                     {calculateCredits(scenario.il, scenario.keyword).toLocaleString('tr-TR')} kredi
                                 </div>
                             </div>

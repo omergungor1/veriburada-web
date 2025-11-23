@@ -22,7 +22,7 @@ export default function Header() {
               priority
             />
             <div className="flex flex-col">
-              <span className="text-xl font-bold bg-gradient-to-r from-[#1A73E8] to-[#0D47A1] bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-[#7BC87B] to-[#5FA85F] bg-clip-text text-transparent">
                 Veri Burada
               </span>
               <span className="text-xs text-gray-500 -mt-1 hidden sm:block">
@@ -33,16 +33,16 @@ export default function Header() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-[#1A73E8] transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               Ana Sayfa
             </Link>
-            <Link href="/pricing" className="text-gray-700 hover:text-[#1A73E8] transition-colors">
+            <Link href="/pricing" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               Fiyatlandırma
             </Link>
-            <Link href="/icerik-merkezi" className="text-gray-700 hover:text-[#1A73E8] transition-colors">
+            <Link href="/icerik-merkezi" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               İçerik Merkezi
             </Link>
-            <Link href="/iletisim" className="text-gray-700 hover:text-[#1A73E8] transition-colors">
+            <Link href="/iletisim" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               İletişim
             </Link>
           </div>
@@ -51,13 +51,13 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="https://app.veriburada.com/login"
-              className="text-gray-700 hover:text-[#1A73E8] transition-colors"
+              className="text-gray-700 hover:text-[#7BC87B] transition-colors"
             >
               Giriş Yap
             </Link>
             <Link
               href="https://app.veriburada.com/register"
-              className="bg-[#1A73E8] text-white px-4 py-2 rounded-lg hover:bg-[#0D47A1] transition-colors"
+              className="bg-[#7BC87B] text-white px-4 py-2 rounded-lg hover:bg-[#5FA85F] transition-colors"
             >
               Kayıt Ol
             </Link>
@@ -82,28 +82,28 @@ export default function Header() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4 border-t">
-            <Link href="/" className="block text-gray-700 hover:text-[#1A73E8]">
+            <Link href="/" className="block text-gray-700 hover:text-[#7BC87B]">
               Ana Sayfa
             </Link>
-            <Link href="/pricing" className="block text-gray-700 hover:text-[#1A73E8]">
+            <Link href="/pricing" className="block text-gray-700 hover:text-[#7BC87B]">
               Fiyatlandırma
             </Link>
-            <Link href="/icerik-merkezi" className="block text-gray-700 hover:text-[#1A73E8]">
+            <Link href="/icerik-merkezi" className="block text-gray-700 hover:text-[#7BC87B]">
               İçerik Merkezi
             </Link>
-            <Link href="/iletisim" className="block text-gray-700 hover:text-[#1A73E8]">
+            <Link href="/iletisim" className="block text-gray-700 hover:text-[#7BC87B]">
               İletişim
             </Link>
             <div className="pt-4 border-t space-y-2">
               <Link
                 href="https://app.veriburada.com/login"
-                className="block text-gray-700 hover:text-[#1A73E8]"
+                className="block text-gray-700 hover:text-[#7BC87B]"
               >
                 Giriş Yap
               </Link>
               <Link
                 href="https://app.veriburada.com/register"
-                className="block bg-[#1A73E8] text-white px-4 py-2 rounded-lg text-center hover:bg-[#0D47A1]"
+                className="block bg-[#7BC87B] text-white px-4 py-2 rounded-lg text-center hover:bg-[#5FA85F]"
               >
                 Kayıt Ol
               </Link>

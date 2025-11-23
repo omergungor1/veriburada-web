@@ -49,7 +49,7 @@ export default function BlogPage() {
               href={`/blog/${post.slug}`}
               className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
             >
-              <span className="text-sm text-[#1A73E8] font-semibold">{post.category}</span>
+              <span className="text-sm text-[#7BC87B] font-semibold">{post.category}</span>
               <h3 className="text-xl font-semibold text-[#111827] mt-2 mb-2">{post.title}</h3>
               <p className="text-gray-600 mb-4">{post.description}</p>
               <span className="text-sm text-gray-500">{post.date}</span>

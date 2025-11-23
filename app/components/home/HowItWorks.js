@@ -18,14 +18,14 @@ const steps = [
   {
     number: 3,
     title: 'Veri siparişinizi oluşturun',
-    description: 'İl seç + kategori seç + keyword ekle. Siparişinizi dakikalar içinde oluşturun.',
+    description: 'İl seç +  işletme türünü ekle. Siparişinizi dakikalar içinde oluşturun.',
     cta: null,
     ctaLink: null,
   },
   {
     number: 4,
-    title: '1 Gün içinde veri elinizde',
-    description: 'Siparişiniz 24 saat içinde hazır. CSV veya Excel formatında indirin.',
+    title: 'İşletme Listenizi İndirin',
+    description: 'Siparişiniz 1 gün içinde hazır. CSV veya Excel formatında indirin. (Süre istenilen işletme adedine göre değişkenlik gösterebilir)',
     cta: null,
     ctaLink: null,
   },
@@ -41,8 +41,8 @@ export default function HowItWorks() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step) => (
             <div key={step.number} className="relative">
-              <div className="bg-[#E3F2FD] rounded-lg p-6 h-full">
-                <div className="w-12 h-12 bg-[#1A73E8] text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+              <div className="bg-[#E8F8E8] rounded-lg p-6 h-full">
+                <div className="w-12 h-12 bg-[#7BC87B] text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
                   {step.number}
                 </div>
                 <h3 className="text-xl font-semibold text-[#111827] mb-3">{step.title}</h3>
@@ -50,15 +50,15 @@ export default function HowItWorks() {
                 {step.cta && (
                   <Link
                     href={step.ctaLink}
-                    className="inline-block bg-[#1A73E8] text-white px-4 py-2 rounded-lg hover:bg-[#0D47A1] transition-colors text-sm font-semibold"
+                    className="inline-block bg-[#7BC87B] text-white px-4 py-2 rounded-lg hover:bg-[#5FA85F] transition-colors text-sm font-semibold"
                   >
                     {step.cta}
                   </Link>
                 )}
               </div>
               {step.number < steps.length && (
-                <div className="hidden lg:block absolute top-1/2 -right-7 w-6 h-0.5 bg-[#1A73E8] transform -translate-y-1/2">
-                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-[#1A73E8] border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+                <div className="hidden lg:block absolute top-1/2 -right-7 w-6 h-0.5 bg-[#7BC87B] transform -translate-y-1/2">
+                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-[#7BC87B] border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
                 </div>
               )}
             </div>
@@ -67,7 +67,7 @@ export default function HowItWorks() {
         <div className="text-center mt-12">
           <Link
             href="https://app.veriburada.com/register"
-            className="inline-block bg-[#FF6F00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#E65100] transition-colors shadow-lg hover:shadow-xl"
+            className="inline-block bg-[#7BC87B] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#5FA85F] transition-colors shadow-lg hover:shadow-xl"
           >
             Ücretsiz 100 kredi ile hemen başla
           </Link>

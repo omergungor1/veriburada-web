@@ -87,7 +87,7 @@ export default function PricingPreview() {
                   transitionDelay: `${index * 150}ms`,
                 }}
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-[#1A73E8] to-[#0D47A1] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#7BC87B] to-[#5FA85F] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg hover:scale-110 transition-transform duration-300">
                   <div className="text-white">
                     {benefit.icon}
                   </div>

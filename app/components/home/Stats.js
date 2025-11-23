@@ -73,7 +73,7 @@ export default function Stats() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-[#1A73E8] via-[#0D47A1] to-[#1A73E8] relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-[#7BC87B] via-[#5FA85F] to-[#7BC87B] relative overflow-hidden"
     >
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">

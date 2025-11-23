@@ -64,7 +64,7 @@ export default function Testimonials() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-[#FF6F00] via-[#FF8F00] to-[#FFB74D] relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-[#BEFABE] via-[#7BC87B] to-[#5FA85F] relative overflow-hidden"
     >
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -86,7 +86,7 @@ export default function Testimonials() {
           <div className={`bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12 relative min-h-[400px] flex flex-col justify-between transform transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}>
             {/* Quote Icon */}
-            <div className="absolute top-6 left-6 text-[#1A73E8] opacity-20">
+            <div className="absolute top-6 left-6 text-[#7BC87B] opacity-20">
               <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
@@ -95,7 +95,7 @@ export default function Testimonials() {
             <div className="text-center relative z-10 flex-1 flex flex-col justify-center">
               {/* Avatar */}
               <div className="mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#1A73E8] to-[#0D47A1] rounded-full flex items-center justify-center mx-auto text-4xl shadow-lg">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#7BC87B] to-[#5FA85F] rounded-full flex items-center justify-center mx-auto text-4xl shadow-lg">
                   {testimonials[currentIndex].avatar}
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function Testimonials() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`transition-all duration-300 ${index === currentIndex
-                    ? 'w-10 h-3 bg-[#1A73E8] rounded-full'
+                    ? 'w-10 h-3 bg-[#7BC87B] rounded-full'
                     : 'w-3 h-3 bg-gray-300 rounded-full hover:bg-gray-400'
                     }`}
                   aria-label={`Testimonial ${index + 1}`}

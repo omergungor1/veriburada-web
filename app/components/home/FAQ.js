@@ -35,11 +35,11 @@ export default function FAQ() {
             <div key={index} className="border-b border-gray-200 last:border-b-0">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full py-6 text-left flex items-center justify-between hover:text-[#1A73E8] transition-colors"
+                className="w-full py-6 text-left flex items-center justify-between hover:text-[#7BC87B] transition-colors"
               >
                 <span className="font-semibold text-lg text-[#111827]">{faq.question}</span>
                 <svg
-                  className={`w-6 h-6 text-[#1A73E8] transform transition-transform ${
+                  className={`w-6 h-6 text-[#7BC87B] transform transition-transform ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"

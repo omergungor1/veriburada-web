@@ -59,7 +59,7 @@ export default function BlogPostPage({ params }) {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8 md:p-12">
             <div className="mb-4">
-              <span className="text-sm text-[#1A73E8] font-semibold">{post.category}</span>
+              <span className="text-sm text-[#7BC87B] font-semibold">{post.category}</span>
               <span className="text-gray-400 mx-2">•</span>
               <span className="text-sm text-gray-500">{post.date}</span>
             </div>

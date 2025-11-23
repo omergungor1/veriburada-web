@@ -16,7 +16,10 @@ export const metadata = {
   description: "Google Haritalardaki işletme profil verilerini 1 gün içinde teslim ediyoruz. 1.7M+ konum, telefon numarası ve iletişim bilgileri.",
   keywords: "google maps veri, işletme verileri, lead generation, veri çıkarma",
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
     shortcut: '/favicon.ico',
     apple: '/favicon.ico',
   },

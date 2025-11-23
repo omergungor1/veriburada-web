@@ -11,7 +11,7 @@ const useCases = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-green-400 to-emerald-500',
   },
   {
     title: 'Rekabet Analizi',
@@ -75,7 +75,7 @@ export default function UseCases() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-[#FF6F00] via-[#FF8F00] to-[#FFB74D] relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-[#BEFABE] via-[#7BC87B] to-[#5FA85F] relative overflow-hidden"
     >
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -114,7 +114,7 @@ export default function UseCases() {
                     {useCase.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#111827] mb-3 group-hover:text-[#1A73E8] transition-colors">
+                <h3 className="text-xl font-semibold text-[#111827] mb-3 group-hover:text-[#7BC87B] transition-colors">
                   {useCase.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors flex-1">

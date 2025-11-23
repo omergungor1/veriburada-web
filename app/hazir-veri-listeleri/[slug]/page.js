@@ -36,7 +36,7 @@ export default function HazirVeriListesiDetailPage({ params }) {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-[#E3F2FD]">
+                  <tr className="bg-[#E8F8E8]">
                     <th className="p-3 text-left">İşletme Adı</th>
                     <th className="p-3 text-left">Adres</th>
                     <th className="p-3 text-left">Telefon</th>
@@ -74,7 +74,7 @@ export default function HazirVeriListesiDetailPage({ params }) {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1A73E8] focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7BC87B] focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -86,7 +86,7 @@ export default function HazirVeriListesiDetailPage({ params }) {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1A73E8] focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7BC87B] focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -97,14 +97,14 @@ export default function HazirVeriListesiDetailPage({ params }) {
                     type="text"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1A73E8] focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7BC87B] focus:border-transparent"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-[#FF6F00] text-white py-3 rounded-lg font-semibold hover:bg-[#E65100] transition-colors"
+                  className="w-full bg-[#7BC87B] text-white py-3 rounded-lg font-semibold hover:bg-[#5FA85F] transition-colors"
                 >
-                  Listeyi İndir
+                  Listeyi Görüntüle
                 </button>
               </form>
             </div>
@@ -113,7 +113,7 @@ export default function HazirVeriListesiDetailPage({ params }) {
               <p className="text-green-800 mb-4">Form başarıyla gönderildi! Listeyi indirmek için email'inizi kontrol edin.</p>
               <Link
                 href="https://app.veriburada.com/register"
-                className="inline-block bg-[#1A73E8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#0D47A1] transition-colors"
+                className="inline-block bg-[#7BC87B] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#5FA85F] transition-colors"
               >
                 100 ücretsiz kredi ile hemen başla
               </Link>

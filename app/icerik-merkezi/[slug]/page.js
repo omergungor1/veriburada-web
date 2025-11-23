@@ -32,7 +32,7 @@ function BlogDetailContent() {
             <div className="min-h-screen bg-[#F9FAFB] py-12">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl font-bold text-[#111827] mb-4">İçerik Bulunamadı</h1>
-                    <Link href="/icerik-merkezi" className="text-[#1A73E8] hover:underline">
+                    <Link href="/icerik-merkezi" className="text-[#7BC87B] hover:underline">
                         İçerik Merkezi'ne Dön
                     </Link>
                 </div>
@@ -71,7 +71,7 @@ function BlogDetailContent() {
                 <nav className="mb-6 text-sm text-gray-600">
                     <Link
                         href={previousTab ? `/icerik-merkezi?tab=${previousTab}` : '/icerik-merkezi'}
-                        className="hover:text-[#1A73E8]"
+                        className="hover:text-[#7BC87B]"
                     >
                         İçerik Merkezi
                     </Link>
@@ -82,7 +82,7 @@ function BlogDetailContent() {
                 {/* Header */}
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
                     {blog.image && (
-                        <div className="relative h-64 md:h-96 overflow-hidden bg-gradient-to-br from-[#1A73E8] to-[#0D47A1]">
+                        <div className="relative h-64 md:h-96 overflow-hidden bg-gradient-to-br from-[#7BC87B] to-[#5FA85F]">
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <span className="text-white text-6xl md:text-8xl font-bold opacity-50">
                                     {blog.title.charAt(0)}
@@ -92,7 +92,7 @@ function BlogDetailContent() {
                     )}
                     <div className="p-6 md:p-8">
                         <div className="mb-4">
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold bg-blue-100 text-blue-800">
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold bg-green-100 text-green-800">
                                 {getTypeLabel(blog.type)}
                             </span>
                         </div>
@@ -124,7 +124,7 @@ function BlogDetailContent() {
                         {!formSubmitted && !showForm && (
                             <button
                                 onClick={() => setShowForm(true)}
-                                className="w-full md:w-auto bg-[#FF6F00] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#E65100] transition-colors shadow-lg hover:shadow-xl"
+                                className="w-full md:w-auto bg-[#7BC87B] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#5FA85F] transition-colors shadow-lg hover:shadow-xl"
                             >
                                 Listeyi Görüntüle
                             </button>
@@ -142,7 +142,7 @@ function BlogDetailContent() {
                                             required
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1A73E8] focus:border-transparent"
+                                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7BC87B] focus:border-transparent"
                                             placeholder="Adınız ve soyadınız"
                                         />
                                     </div>
@@ -155,7 +155,7 @@ function BlogDetailContent() {
                                             required
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1A73E8] focus:border-transparent"
+                                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7BC87B] focus:border-transparent"
                                             placeholder="email@example.com"
                                         />
                                     </div>
@@ -168,7 +168,7 @@ function BlogDetailContent() {
                                             required
                                             value={formData.company}
                                             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1A73E8] focus:border-transparent"
+                                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7BC87B] focus:border-transparent"
                                             placeholder="Mesleğiniz veya şirket adınız"
                                         />
                                     </div>
@@ -186,7 +186,7 @@ function BlogDetailContent() {
                                     <button
                                         onClick={handleSubmit}
                                         disabled={!formData.name || !formData.email || !formData.company}
-                                        className="w-full md:w-auto bg-[#FF6F00] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#E65100] transition-colors shadow-lg hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed"
+                                        className="w-full md:w-auto bg-[#7BC87B] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#5FA85F] transition-colors shadow-lg hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed"
                                     >
                                         Listeyi Görüntüle
                                     </button>
@@ -208,7 +208,7 @@ function BlogDetailContent() {
                                     href={blog.googleSheetUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 bg-[#1A73E8] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#0D47A1] transition-colors shadow-lg hover:shadow-xl"
+                                    className="inline-flex items-center gap-2 bg-[#7BC87B] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#5FA85F] transition-colors shadow-lg hover:shadow-xl"
                                 >
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -224,7 +224,7 @@ function BlogDetailContent() {
                 <div className="text-center">
                     <Link
                         href={previousTab ? `/icerik-merkezi?tab=${previousTab}` : '/icerik-merkezi'}
-                        className="inline-flex items-center gap-2 text-[#1A73E8] hover:text-[#0D47A1] font-semibold"
+                        className="inline-flex items-center gap-2 text-[#7BC87B] hover:text-[#5FA85F] font-semibold"
                     >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

@@ -50,14 +50,14 @@ export default function Features() {
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-[#1A73E8] mb-4">
+              <div className="text-[#7BC87B] mb-4">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold text-[#111827] mb-4">{feature.title}</h3>
               <ul className="space-y-2">
                 {feature.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start text-gray-600">
-                    <svg className="w-5 h-5 text-[#1A73E8] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-[#7BC87B] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     {item}

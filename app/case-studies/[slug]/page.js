@@ -71,8 +71,8 @@ export default function CaseStudyPage({ params }) {
 
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-semibold text-[#111827] mb-4">Sonuçlar</h2>
-              <div className="bg-[#E3F2FD] p-4 rounded-lg">
-                <p className="text-xl font-semibold text-[#1A73E8]">{study.results}</p>
+              <div className="bg-[#E8F8E8] p-4 rounded-lg">
+                <p className="text-xl font-semibold text-[#7BC87B]">{study.results}</p>
               </div>
               <p className="text-gray-700 mt-4 leading-relaxed">{study.details}</p>
             </div>
@@ -80,7 +80,7 @@ export default function CaseStudyPage({ params }) {
             <div className="text-center">
               <a
                 href="https://app.veriburada.com/register"
-                className="inline-block bg-[#FF6F00] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#E65100] transition-colors shadow-lg"
+                className="inline-block bg-[#7BC87B] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#5FA85F] transition-colors shadow-lg"
               >
                 Siz de Verinizi Sipariş Edin
               </a>

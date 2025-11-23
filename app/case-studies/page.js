@@ -64,7 +64,7 @@ export default function CaseStudiesPage() {
                 </div>
                 <div>
                   <span className="font-semibold text-gray-700">Sonuç:</span>
-                  <span className="text-[#1A73E8] ml-2 font-semibold">{study.results}</span>
+                  <span className="text-[#7BC87B] ml-2 font-semibold">{study.results}</span>
                 </div>
               </div>
             </Link>

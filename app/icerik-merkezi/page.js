@@ -22,7 +22,7 @@ const getTypeColor = (type) => {
     case 'ready-lists':
       return 'bg-green-100 text-green-800';
     case 'blog':
-      return 'bg-blue-100 text-blue-800';
+      return 'bg-green-100 text-green-800';
     case 'case-studies':
       return 'bg-purple-100 text-purple-800';
     default:
@@ -72,8 +72,8 @@ function IcerikMerkeziContent() {
               key={type.id}
               onClick={() => handleTabChange(type.id)}
               className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${activeTab === type.id
-                ? 'bg-[#1A73E8] text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-[#E3F2FD] hover:shadow-md'
+                ? 'bg-[#7BC87B] text-white shadow-lg'
+                : 'bg-white text-gray-700 hover:bg-[#E8F8E8] hover:shadow-md'
                 }`}
             >
               {type.name}
@@ -96,7 +96,7 @@ function IcerikMerkeziContent() {
                       {getTypeLabel(item.type)}
                     </span>
                   </div>
-                  <div className="w-full h-full bg-gradient-to-br from-[#1A73E8] to-[#0D47A1] opacity-90 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <div className="w-full h-full bg-gradient-to-br from-[#7BC87B] to-[#5FA85F] opacity-90 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-white text-4xl font-bold">{item.title.charAt(0)}</span>
                   </div>
                 </div>
@@ -109,12 +109,12 @@ function IcerikMerkeziContent() {
                     </span>
                   </div>
                 )}
-                <h3 className="text-xl font-bold text-[#111827] mb-2 group-hover:text-[#1A73E8] transition-colors line-clamp-2">
+                <h3 className="text-xl font-bold text-[#111827] mb-2 group-hover:text-[#7BC87B] transition-colors line-clamp-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm line-clamp-3">{item.description}</p>
                 {item.hasGoogleSheet && (
-                  <div className="mt-4 flex items-center gap-2 text-sm text-[#1A73E8] font-semibold">
+                  <div className="mt-4 flex items-center gap-2 text-sm text-[#7BC87B] font-semibold">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>

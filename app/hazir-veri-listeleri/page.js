@@ -50,7 +50,7 @@ export default function HazirVeriListeleriPage() {
               <p className="text-gray-600 mb-4">{list.description}</p>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-500">{list.businessCount} işletme</span>
-                <span className="text-[#1A73E8] font-semibold">İndir →</span>
+                <span className="text-[#7BC87B] font-semibold">İndir →</span>
               </div>
             </Link>
           ))}

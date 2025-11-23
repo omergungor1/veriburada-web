@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --primary-blue: #1A73E8;
-  --dark-blue: #0D47A1;
-  --light-blue: #E3F2FD;
+  --primary-green: #7BC87B;
+  --dark-green: #5FA85F;
+  --light-green: #E8F8E8;
+  --accent-green: #BEFABE;
   --soft-gray: #F9FAFB;
   --dark-gray: #111827;
-  --cta-orange: #FF6F00;
+  --cta-green: #7BC87B;
 }
 
 @theme inline {
-  --color-primary-blue: var(--primary-blue);
-  --color-dark-blue: var(--dark-blue);
-  --color-light-blue: var(--light-blue);
+  --color-primary-green: var(--primary-green);
+  --color-dark-green: var(--dark-green);
+  --color-light-green: var(--light-green);
+  --color-accent-green: var(--accent-green);
   --color-soft-gray: var(--soft-gray);
   --color-dark-gray: var(--dark-gray);
-  --color-cta-orange: var(--cta-orange);
+  --color-cta-green: var(--cta-green);
   --font-sans: var(--font-nunito);
 }
 
@@ -23,4 +25,31 @@ body {
   background: #ffffff;
   color: var(--dark-gray);
   font-family: var(--font-nunito), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@keyframes pinScale {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pin-scale {
+  animation: pinScale 0.6s ease-out forwards;
+}
+
+/* Development helper classes */
+.show,
+.find {
+  border: 2px solid rgb(127 29 29) !important;
 }
