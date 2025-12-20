@@ -5,22 +5,22 @@ import { useState, useEffect, useRef } from 'react';
 const testimonials = [
   {
     name: 'Ahmet Yılmaz',
-    company: 'E-ticaret Firması',
-    text: 'Veriburada sayesinde 3.200 yeni müşteriye ulaştık. Veriler çok kaliteli ve güncel.',
+    company: 'Toptancı',
+    text: 'Veriburada sayesinde 12.000 potansiyel müşteri listesi elde ettik. İlk haftada 10 yeni müşteri edindik.',
     rating: 5,
     avatar: '👨‍💼',
   },
   {
     name: 'Ayşe Demir',
-    company: 'Beyaz Eşya Servisi',
-    text: '3 il ekleyerek 8.000 TL ek gelir elde ettik. Müşteri desteği harika.',
+    company: 'Ambalaj Toptancısı',
+    text: 'Bize verdikleri liste ve veriburada crm yazılımı ile pazarlama yapıyoruz. Çok sorunsuz bir deneyimdi. Çok teşekkür ediyorum.',
     rating: 5,
     avatar: '👩‍💼',
   },
   {
     name: 'Mehmet Kaya',
     company: 'Reklam Ajansı',
-    text: '40.000 uzman veri ile 11 müşteriye lead ürettik. ROI çok yüksek.',
+    text: 'Binlerce esnaf bilgisi elde ettik. Çok başarılı bir yazılım olmuş, denemek isteyenlere tavsiye ederim.',
     rating: 5,
     avatar: '👨‍💻',
   },

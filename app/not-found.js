@@ -38,12 +38,6 @@ export default function NotFound() {
             <div className="font-semibold">Fiyatlar</div>
           </Link>
           <Link
-            href="/hazir-veri-listeleri"
-            className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow text-gray-700 hover:text-[#7BC87B]"
-          >
-            <div className="font-semibold">Hazır Listeler</div>
-          </Link>
-          <Link
             href="/blog"
             className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow text-gray-700 hover:text-[#7BC87B]"
           >

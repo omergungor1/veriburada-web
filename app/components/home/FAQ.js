@@ -5,20 +5,16 @@ import { useState } from 'react';
 const faqs = [
   {
     question: 'Kalan krediler ne olur?',
-    answer: 'Kredileriniz hesabınızda saklanır ve istediğiniz zaman kullanabilirsiniz. Kredileriniz süresiz geçerlidir.',
+    answer: 'Kalan kredileriniz hesabınızda saklanır ve istediğiniz zaman kullanabilirsiniz. Hediye kredilerin geçerlilik süresi 1 aydır, satın alınan kredilerin geçerlilik süresi ise 1 yıldır.',
   },
   {
     question: 'Veriler nasıl elde edilir?',
-    answer: 'Verilerimiz Google Haritalar API\'sini kullanarak otomatik olarak toplanır ve güncellenir. Tüm veriler yasal ve etik yollarla elde edilir.',
+    answer: 'Verilerimiz Google Haritalar API\'sini kullanarak elde edilir.',
   },
   {
     question: 'Ne zaman teslim edilir?',
-    answer: 'Siparişleriniz 24 saat içinde hazırlanır ve size CSV veya Excel formatında teslim edilir. Büyük siparişler için süre 48 saate kadar uzayabilir.',
-  },
-  {
-    question: 'KVKK\'ya uygun mu?',
-    answer: 'Evet, tüm veri işleme süreçlerimiz KVKK (Kişisel Verilerin Korunması Kanunu) ve GDPR uyumludur. Verileriniz güvenli bir şekilde işlenir ve saklanır.',
-  },
+    answer: 'Veri talepleriniz 1 ila 3 iş günü içinde teslim edilir. Veriler panelinize yüklenir ve kolayca indirilebilir. Süre istenilen işletme adedine göre değişkenlik gösterebilir.',
+  }
 ];
 
 export default function FAQ() {
@@ -39,9 +35,8 @@ export default function FAQ() {
               >
                 <span className="font-semibold text-lg text-[#111827]">{faq.question}</span>
                 <svg
-                  className={`w-6 h-6 text-[#7BC87B] transform transition-transform ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
+                  className={`w-6 h-6 text-[#7BC87B] transform transition-transform ${openIndex === index ? 'rotate-180' : ''
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

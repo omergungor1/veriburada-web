@@ -26,7 +26,7 @@ export default function Header() {
                 Veri Burada
               </span>
               <span className="text-xs text-gray-500 -mt-1 hidden sm:block">
-                Google Maps Veri Platformu
+                Tüm işletmeler bir tık uzağında...
               </span>
             </div>
           </Link>

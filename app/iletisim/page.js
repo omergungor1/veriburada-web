@@ -82,7 +82,7 @@ export default function IletisimPage() {
                   Hızlı destek için WhatsApp üzerinden bize ulaşabilirsiniz.
                 </p>
                 <a
-                  href="https://wa.me/905551234567"
+                  href="https://wa.me/905428212205"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-[#25D366] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#20BA5A] transition-colors"
@@ -101,7 +101,7 @@ export default function IletisimPage() {
                     <strong>Email:</strong> info@veriburada.com
                   </p>
                   <p>
-                    <strong>Telefon:</strong> +90 (555) 123 45 67
+                    <strong>Telefon:</strong> +90 (542) 821 22 05
                   </p>
                   <p>
                     <strong>Çalışma Saatleri:</strong> Pazartesi - Cuma, 09:00 - 18:00

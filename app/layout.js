@@ -12,7 +12,7 @@ const nunito = Nunito({
 });
 
 export const metadata = {
-  title: "Veriburada - Google Haritalar İşletme Verileri | 1 Gün İçinde Teslim",
+  title: "Veriburada",
   description: "Google Haritalardaki işletme profil verilerini 1 gün içinde teslim ediyoruz. 1.7M+ konum, telefon numarası ve iletişim bilgileri.",
   keywords: "google maps veri, işletme verileri, lead generation, veri çıkarma",
   icons: {
@@ -24,7 +24,7 @@ export const metadata = {
     apple: '/favicon.ico',
   },
   openGraph: {
-    title: "Veriburada - Google Haritalar İşletme Verileri",
+    title: "Veriburada",
     description: "Google Haritalardaki işletme profil verilerini 1 gün içinde teslim ediyoruz.",
     type: "website",
   },

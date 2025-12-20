@@ -131,9 +131,10 @@ export default function Hero() {
           {/* Left Side - Text Content */}
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#111827] mb-6 leading-tight relative">
-              Google İşletme Listesini{' '}
+              {/* Google İşletme Listesini{' '}
               <span className="text-[#7BC87B]">1 Gün İçinde</span>{' '}
-              Teslim Ediyoruz
+              Teslim Ediyoruz */}
+              Google haritalardaki işletme listesi elinizde
               <button
                 type="button"
                 className="ml-3 relative inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-[#E8F8E8] hover:bg-[#7BC87B] active:bg-[#7BC87B] transition-colors group align-middle z-50"
@@ -231,7 +232,7 @@ export default function Hero() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium">Sınırsız Müşteri</span>
+                <span className="text-gray-700 font-medium">Sınırsız Potansiyel Müşteri</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-[#E8F8E8] rounded-lg flex items-center justify-center">

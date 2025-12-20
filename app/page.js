@@ -9,11 +9,11 @@ import Testimonials from './components/home/Testimonials';
 import FAQ from './components/home/FAQ';
 
 export const metadata = {
-  title: 'Veriburada - Google Haritalar İşletme Verileri | 1 Gün İçinde Teslim',
+  title: 'Veriburada',
   description: 'Google Haritalardaki işletme profil verilerini 1 gün içinde teslim ediyoruz. 1.7M+ konum, telefon numarası ve iletişim bilgileri.',
   keywords: 'google maps veri, işletme verileri, lead generation, veri çıkarma, google maps scraping',
   openGraph: {
-    title: 'Veriburada - Google Haritalar İşletme Verileri',
+    title: 'Veriburada',
     description: 'Google Haritalardaki işletme profil verilerini 1 gün içinde teslim ediyoruz.',
     type: 'website',
   },
