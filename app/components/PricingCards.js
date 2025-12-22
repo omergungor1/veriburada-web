@@ -4,55 +4,112 @@ import Link from 'next/link';
 
 const pricingPlans = [
   {
-    name: 'Başlangıç',
-    price: '₺999',
-    originalPrice: '₺1,199',
-    credits: '1.000',
+    name: 'Test Paketi',
+    description: 'Küçük testler ve deneme kullanımı için uygundur',
+    price: '₺249',
+    credits: '150',
+    freeCrmMonths: 1,
     features: [
-      '1.000 kredi',
+      '150 kredi/işletme',
       '1 yıl geçerlilik',
-      'Sınırsız veri çekme',
-      'Özel destek ekibi',
-      '1 günde veri teslim',
+      'İlk 1 ay ücretsiz CRM panel erişimi',
+      '1-3 iş günü veri teslimi',
+      'WhatsApp destek hattı',
+      'CRM paneli veya veri indirme seçeneği',
     ],
     nonRefundable: true,
     bgColor: 'bg-green-50',
     popular: false,
-    campaignCode: 'PKG1000',
+  },
+  {
+    name: 'Başlangıç',
+    description: 'Küçük ekipler ve düzenli kullanım',
+    price: '₺990',
+    credits: '1.000',
+    freeCrmMonths: 1,
+    features: [
+      '1.000 kredi/işletme',
+      '1 yıl geçerlilik',
+      'İlk 1 ay ücretsiz CRM panel erişimi',
+      '1-3 iş günü veri teslimi',
+      'WhatsApp destek hattı',
+      'CRM paneli veya veri indirme seçeneği',
+    ],
+    nonRefundable: true,
+    bgColor: 'bg-green-50',
+    popular: false,
   },
   {
     name: 'Popüler',
-    price: '₺4.499',
-    originalPrice: '₺4.999',
+    description: 'Aktif satış ve pazarlama ekipleri',
+    price: '₺3.990',
     credits: '5.000',
+    freeCrmMonths: 1,
     features: [
-      '5.000 kredi',
+      '5.000 kredi/işletme',
       '1 yıl geçerlilik',
-      'Sınırsız veri çekme',
-      'Özel destek ekibi',
-      '1 günde veri teslim',
+      'İlk 1 ay ücretsiz CRM panel erişimi',
+      '1-3 iş günü veri teslimi',
+      'WhatsApp destek hattı',
+      'CRM paneli veya veri indirme seçeneği',
     ],
     nonRefundable: true,
     bgColor: 'bg-green-50',
     popular: true,
-    campaignCode: 'PKG2500',
   },
   {
-    name: 'En İyi Değer',
-    price: '₺7.999',
-    originalPrice: '₺9.999',
+    name: 'Profesyonel',
+    description: 'Ölçeklenen operasyonlar',
+    price: '₺6.990',
     credits: '10.000',
+    freeCrmMonths: 2,
     features: [
-      '10.000 kredi',
+      '10.000 kredi/işletme',
       '1 yıl geçerlilik',
-      'Sınırsız veri çekme',
-      'Özel destek ekibi',
-      '1 günde veri teslim',
+      'İlk 2 ay ücretsiz CRM panel erişimi',
+      '1-3 iş günü veri teslimi',
+      'WhatsApp destek hattı',
+      'CRM paneli veya veri indirme seçeneği',
+    ],
+    nonRefundable: true,
+    bgColor: 'bg-blue-50',
+    popular: false,
+  },
+  {
+    name: 'İşletme',
+    description: 'Yüksek hacimli veri toplama',
+    price: '₺11.990',
+    credits: '20.000',
+    freeCrmMonths: 2,
+    features: [
+      '20.000 kredi/işletme',
+      '1 yıl geçerlilik',
+      'İlk 2 ay ücretsiz CRM panel erişimi',
+      '1-3 iş günü veri teslimi',
+      'WhatsApp destek hattı',
+      'CRM paneli veya veri indirme seçeneği',
     ],
     nonRefundable: true,
     bgColor: 'bg-purple-50',
     popular: false,
-    campaignCode: 'PKG5000',
+  },
+  {
+    name: 'Kurumsal',
+    description: 'Büyük ekipler ve ajanslar',
+    price: '₺21.990',
+    credits: '50.000',
+    freeCrmMonths: 3,
+    features: [
+      '50.000 kredi/işletme',
+      '1 yıl geçerlilik',
+      'İlk 3 ay ücretsiz CRM panel erişimi',
+      '1-3 iş günü veri teslimi',
+      'WhatsApp destek hattı',
+      'CRM paneli veya veri indirme seçeneği',
+    ],
+    nonRefundable: true,
+    bgColor: 'bg-purple-50',
+    popular: false,
   },
 ];
 
@@ -69,7 +126,7 @@ export default function PricingCards({ isVisible = true, showTitle = false }) {
           </p>
         </div>
       )}
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {pricingPlans.map((plan, index) => (
           <div
             key={index}
@@ -87,10 +144,12 @@ export default function PricingCards({ isVisible = true, showTitle = false }) {
               </div>
             )}
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-[#111827] mb-4">{plan.name}</h3>
+              <h3 className="text-2xl font-bold text-[#111827] mb-2">{plan.name}</h3>
+              {plan.description && (
+                <p className="text-sm text-gray-600 mb-4">{plan.description}</p>
+              )}
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-4xl md:text-5xl font-bold text-[#111827]">{plan.price}</span>
-                <span className="text-lg text-gray-500 line-through">{plan.originalPrice}</span>
               </div>
             </div>
             <ul className="space-y-3 mb-6">
@@ -116,7 +175,9 @@ export default function PricingCards({ isVisible = true, showTitle = false }) {
               )}
             </ul>
             <Link
-              href={`https://app.veriburada.com/register?campaign=${plan.campaignCode}`}
+              href="https://www.shopier.com/veriburada/42302576"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block w-full bg-[#111827] text-white text-center py-3 rounded-lg font-semibold hover:bg-[#1F2937] transition-colors shadow-md hover:shadow-lg"
             >
               <span className="inline-flex items-center gap-2">

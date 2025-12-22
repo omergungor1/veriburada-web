@@ -39,9 +39,9 @@ export default function Header() {
             <Link href="/pricing" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               Fiyatlandırma
             </Link>
-            <Link href="/icerik-merkezi" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
+            {/* <Link href="/icerik-merkezi" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               İçerik Merkezi
-            </Link>
+            </Link> */}
             <Link href="/iletisim" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               İletişim
             </Link>
@@ -51,15 +51,9 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="https://app.veriburada.com/login"
-              className="text-gray-700 hover:text-[#7BC87B] transition-colors"
-            >
-              Giriş Yap
-            </Link>
-            <Link
-              href="https://app.veriburada.com/register"
               className="bg-[#7BC87B] text-white px-4 py-2 rounded-lg hover:bg-[#5FA85F] transition-colors"
             >
-              Kayıt Ol
+              Giriş Yap
             </Link>
           </div>
 
@@ -88,9 +82,9 @@ export default function Header() {
             <Link href="/pricing" className="block text-gray-700 hover:text-[#7BC87B]">
               Fiyatlandırma
             </Link>
-            <Link href="/icerik-merkezi" className="block text-gray-700 hover:text-[#7BC87B]">
+            {/* <Link href="/icerik-merkezi" className="block text-gray-700 hover:text-[#7BC87B]">
               İçerik Merkezi
-            </Link>
+            </Link> */}
             <Link href="/iletisim" className="block text-gray-700 hover:text-[#7BC87B]">
               İletişim
             </Link>

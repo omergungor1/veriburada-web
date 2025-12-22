@@ -16,8 +16,8 @@ const features = [
     title: 'Gelişmiş Verimlilik',
     items: [
       'Derinlemesine Google Haritalar analizi',
-      'Kapsamlı iletişim bilgileri',
-      'Çoklu bilgi çıkarma',
+      'Google arama sonucu toplama',
+      'Web sitelerindeki iletişim bilgilerini toplama',
     ],
     icon: (
       <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">

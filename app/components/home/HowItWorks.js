@@ -4,28 +4,28 @@ const steps = [
   {
     number: 1,
     title: 'Hesap açın',
-    description: 'Hemen ücretsiz hesap oluşturun ve 100 hediye kredi kazanın.',
+    description: 'Hemen hesabınızı oluşturun.',
     cta: 'Kayıt Ol',
     ctaLink: 'https://app.veriburada.com/register',
   },
   {
     number: 2,
     title: 'Kredi yükleyin',
-    description: 'Kredi paketleri: 1000, 2000, 5000, 10000 kredi seçenekleri.',
+    description: 'Kredi paketleri: 150, 1.000, 5.000, 10.000, 20.000, 50.000 kredi seçenekleri.',
     cta: null,
     ctaLink: null,
   },
   {
     number: 3,
     title: 'Veri siparişinizi oluşturun',
-    description: 'İl seç +  işletme türünü ekle. Siparişinizi dakikalar içinde oluşturun.',
+    description: 'Hangi il, ilçedeki işletmeleri toplamak istediğinizi seçin ve siparişinizi oluşturun.',
     cta: null,
     ctaLink: null,
   },
   {
     number: 4,
     title: 'İşletme Listenizi İndirin',
-    description: 'Siparişiniz 1 gün içinde hazır. CSV veya Excel formatında indirin. (Süre istenilen işletme adedine göre değişkenlik gösterebilir)',
+    description: 'Siparişiniz 1-3 gün içinde hazır, CSV veya VCF formatında indirin. (Süre istenilen işletme adedine göre değişkenlik gösterebilir)',
     cta: null,
     ctaLink: null,
   },
@@ -69,7 +69,7 @@ export default function HowItWorks() {
             href="https://app.veriburada.com/register"
             className="inline-block bg-[#7BC87B] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#5FA85F] transition-colors shadow-lg hover:shadow-xl"
           >
-            Ücretsiz 100 kredi ile hemen başla
+            Hemen Başla
           </Link>
         </div>
       </div>
