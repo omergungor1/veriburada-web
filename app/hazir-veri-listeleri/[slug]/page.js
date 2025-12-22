@@ -112,10 +112,10 @@ export default function HazirVeriListesiDetailPage({ params }) {
             <div className="bg-green-50 border border-green-200 rounded-lg p-8 mb-8 text-center">
               <p className="text-green-800 mb-4">Form başarıyla gönderildi! Listeyi indirmek için email'inizi kontrol edin.</p>
               <Link
-                href="https://app.veriburada.com/register"
+                href="https://app.veriburada.com/login"
                 className="inline-block bg-[#7BC87B] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#5FA85F] transition-colors"
               >
-                100 ücretsiz kredi ile hemen başla
+                Hemen Başla
               </Link>
             </div>
           )}

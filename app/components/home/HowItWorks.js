@@ -6,7 +6,7 @@ const steps = [
     title: 'Hesap açın',
     description: 'Hemen hesabınızı oluşturun.',
     cta: 'Kayıt Ol',
-    ctaLink: 'https://app.veriburada.com/register',
+    ctaLink: 'https://app.veriburada.com/login',
   },
   {
     number: 2,
@@ -66,7 +66,7 @@ export default function HowItWorks() {
         </div>
         <div className="text-center mt-12">
           <Link
-            href="https://app.veriburada.com/register"
+            href="https://app.veriburada.com/login"
             className="inline-block bg-[#7BC87B] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#5FA85F] transition-colors shadow-lg hover:shadow-xl"
           >
             Hemen Başla

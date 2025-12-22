@@ -95,12 +95,6 @@ export default function Header() {
               >
                 Giriş Yap
               </Link>
-              <Link
-                href="https://app.veriburada.com/register"
-                className="block bg-[#7BC87B] text-white px-4 py-2 rounded-lg text-center hover:bg-[#5FA85F]"
-              >
-                Kayıt Ol
-              </Link>
             </div>
           </div>
         )}

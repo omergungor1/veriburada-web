@@ -122,10 +122,10 @@ export default function KategoriPage({ params }) {
 
           <div className="text-center">
             <a
-              href="https://app.veriburada.com/register"
+              href="https://app.veriburada.com/login"
               className="inline-block bg-[#7BC87B] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#5FA85F] transition-colors shadow-lg"
             >
-              Hemen Sipariş Oluştur
+              Hemen Başla
             </a>
           </div>
         </div>

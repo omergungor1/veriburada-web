@@ -189,7 +189,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
-                href="https://app.veriburada.com/register"
+                href="https://app.veriburada.com/login"
                 className="group bg-[#090A0A] text-white px-4 py-4 rounded-full font-semibold text-lg hover:bg-[#1F2937] transition-all shadow-lg hover:shadow-xl flex items-center gap-3 justify-center relative"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
