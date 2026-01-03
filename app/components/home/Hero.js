@@ -131,65 +131,19 @@ export default function Hero() {
           {/* Left Side - Text Content */}
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#111827] mb-6 leading-tight relative">
-              {/* Google İşletme Listesini{' '}
-              <span className="text-[#7BC87B]">1 Gün İçinde</span>{' '}
-              Teslim Ediyoruz */}
-              Google haritalardaki işletme listesi elinizde
-              <button
-                type="button"
-                className="ml-3 relative inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-[#E8F8E8] hover:bg-[#7BC87B] active:bg-[#7BC87B] transition-colors group align-middle z-50"
-                onMouseEnter={() => setShowInfoTooltip(true)}
-                onMouseLeave={() => setShowInfoTooltip(false)}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setShowInfoTooltip(!showInfoTooltip);
-                }}
-                aria-label="Teslim süresi bilgisi"
-              >
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#7BC87B] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                {/* Tooltip */}
-                {showInfoTooltip && (
-                  <>
-                    {/* Mobile overlay to close on outside click */}
-                    <div
-                      className="fixed inset-0 z-40 sm:hidden"
-                      onClick={() => setShowInfoTooltip(false)}
-                    />
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-[calc(100vw-2rem)] sm:w-80 max-w-sm z-50 sm:z-50">
-                      <div className="bg-white rounded-lg shadow-2xl p-4 border border-gray-200 mx-auto">
-                        <div className="text-sm text-gray-700 leading-relaxed">
-                          <p className="font-semibold text-[#111827] mb-2">Teslim Süresi Hakkında</p>
-                          <p className="mb-2">
-                            Teslim süresi, sipariş ettiğiniz veri setinin büyüklüğüne ve sunucularımızın yoğunluğuna göre değişkenlik gösterebilir.
-                          </p>
-                          <p className="mb-2">
-                            <strong className="text-[#7BC87B]">Genellikle 1 gün içinde</strong> işletme listesi teslim edilmektedir.
-                          </p>
-                          <p>
-                            Yoğun günlerde bu süre <strong>1 ila 3 iş günü</strong> arasında değişebilir.
-                          </p>
-                        </div>
-                        {/* Tooltip Arrow */}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1">
-                          <div className="w-3 h-3 bg-white border-r border-b border-gray-200 transform rotate-45"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </button>
+              Google haritalardaki{' '}
+              <span className="text-[#7BC87B]">tüm işletmeler</span>{' '}
+              elinizde
             </h1>
 
             <p className="text-xl text-gray-600 mb-8">
-              Google Haritalar'daki milyonlarca işletmeyi elde edin. Türkiye genelinde 2M+ işletme verisi, telefon numarası ve iletişim bilgilerine tek tıkla erişin. Hızlı, güncel ve doğru verilerle işinizi büyütün.
+              Google Haritalar'daki milyonlarca işletmeyi liste olarak indirin. Türkiye genelinde 2M+ işletme verisi, telefon numarası, adres ve iletişim bilgilerine tek tıkla erişin. Hızlı, güncel ve doğru verilerle işinizi büyütün.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
-                href="https://app.veriburada.com/login"
+                href="/eklenti-indir"
                 className="group bg-[#090A0A] text-white px-4 py-4 rounded-full font-semibold text-lg hover:bg-[#1F2937] transition-all shadow-lg hover:shadow-xl flex items-center gap-3 justify-center relative"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -210,26 +164,34 @@ export default function Hero() {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-[#E8F8E8] rounded-lg flex items-center justify-center">
                   <svg className="w-6 h-6 text-[#7BC87B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium">Hediye 100 Kredi</span>
+                <span className="text-gray-700 font-medium">Sınırsız Kullanım</span>
               </div>
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-[#E8F8E8] rounded-lg flex items-center justify-center">
                   <svg className="w-6 h-6 text-[#7BC87B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
                 </div>
                 <span className="text-gray-700 font-medium">Güncel Veri</span>
+              </div> */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#E8F8E8] rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-[#7BC87B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                  </svg>
+                </div>
+                <span className="text-gray-700 font-medium">Kolay Kurulum</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-[#E8F8E8] rounded-lg flex items-center justify-center">
                   <svg className="w-6 h-6 text-[#7BC87B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium">Sınırsız Potansiyel Müşteri</span>
+                <span className="text-gray-700 font-medium">Windows & macOS</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-[#E8F8E8] rounded-lg flex items-center justify-center">
@@ -237,7 +199,7 @@ export default function Hero() {
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium">WhatsApp Destek Hattı</span>
+                <span className="text-gray-700 font-medium">WhatsApp Destek</span>
               </div>
             </div>
           </div>

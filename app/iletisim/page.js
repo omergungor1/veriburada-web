@@ -1,15 +1,72 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function IletisimPage() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const recaptchaRef = useRef(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Form gönderimi burada yapılacak
+    setError('');
+    setLoading(true);
+
+    // reCAPTCHA token al
+    const recaptchaToken = recaptchaRef.current?.getValue();
+
+    if (!recaptchaToken) {
+      setError('Lütfen reCAPTCHA doğrulamasını tamamlayın');
+      setLoading(false);
+      return;
+    }
+
+    try {
+      // IP adresi ve user agent bilgilerini al
+      let ipAddress = '';
+      try {
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+        ipAddress = ipData.ip;
+      } catch (err) {
+        console.error('IP adresi alınamadı:', err);
+      }
+      const userAgent = navigator.userAgent;
+
+      // API'ye gönder
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          recaptchaToken,
+          ipAddress,
+          userAgent,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Mesaj gönderilirken bir hata oluştu');
+      }
+
+      setSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
+      recaptchaRef.current?.reset();
+    } catch (err) {
+      setError(err.message || 'Mesaj gönderilirken bir hata oluştu');
+      recaptchaRef.current?.reset();
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -61,11 +118,23 @@ export default function IletisimPage() {
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7BC87B] focus:border-transparent resize-none"
                     />
                   </div>
+                  <div className="flex justify-center">
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    />
+                  </div>
+                  {error && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-red-800 text-sm">
+                      {error}
+                    </div>
+                  )}
                   <button
                     type="submit"
-                    className="w-full bg-[#7BC87B] text-white py-3 rounded-lg font-semibold hover:bg-[#5FA85F] transition-colors"
+                    disabled={loading}
+                    className="w-full bg-[#7BC87B] text-white py-3 rounded-lg font-semibold hover:bg-[#5FA85F] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Gönder
+                    {loading ? 'Gönderiliyor...' : 'Gönder'}
                   </button>
                 </form>
               ) : (

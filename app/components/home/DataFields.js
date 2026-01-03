@@ -3,11 +3,11 @@
 import { useState, useEffect, useRef } from 'react';
 
 const dataFields = [
-  'Arama Terimi',
+  // 'Arama Terimi',
   'İşletme Adı',
   'İl',
   'İlçe',
-  'Posta Kodu',
+  // 'Posta Kodu',
   'Açık Adres',
   'Plus Kod',
   'Telefon',
@@ -18,6 +18,7 @@ const dataFields = [
   'Yorum Adedi',
   'İşletme Türü',
   'Map URL',
+  'Profil Resmi URL',
 ];
 
 const INITIAL_VISIBLE_COUNT = 12;

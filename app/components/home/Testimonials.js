@@ -13,7 +13,7 @@ const testimonials = [
   {
     name: 'Ayşe Demir',
     company: 'Ambalaj Toptancısı',
-    text: 'Bize verdikleri liste ve veriburada crm yazılımı ile pazarlama yapıyoruz. Çok sorunsuz bir deneyimdi. Çok teşekkür ediyorum.',
+    text: 'MapBot eklentisi sayesinde Google Haritalar\'dan binlerce işletme verisini topladık. Kurulumu ve kullanımı çok kolay. Kesinlikle tavsiye ederim!',
     rating: 5,
     avatar: '👩‍💼',
   },

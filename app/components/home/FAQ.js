@@ -4,17 +4,33 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    question: 'Kalan krediler ne olur?',
-    answer: 'Kalan kredileriniz hesabınızda saklanır ve istediğiniz zaman kullanabilirsiniz. Hediye kredilerin geçerlilik süresi 1 aydır, satın alınan kredilerin geçerlilik süresi ise 1 yıldır.',
+    question: 'Macbook bilgisayarda çalışır mı?',
+    answer: 'Evet, MapBot eklentisi hem Windows hem de macOS (Macbook) bilgisayarlarda sorunsuz çalışır. Platform bağımsız olarak tüm bilgisayarlarda aynı performansı gösterir.',
   },
   {
-    question: 'Veriler nasıl elde edilir?',
-    answer: 'Verilerimiz Google Haritalar API\'sini kullanarak elde edilir.',
+    question: 'Aylık paket ile yıllık paket arasındaki fark nedir?',
+    answer: 'Paketler arasındaki tek fark lisans süresidir. 1 aylık paket 1 ay, 12 aylık paket 12 ay geçerlidir. Tüm paketlerde sınırsız kullanım hakkı vardır. Ne kadar uzun süreli paket alırsanız, aylık maliyetiniz o kadar düşer. Örneğin 12 aylık paket aylık sadece 208₺\'ye gelirken, 1 aylık paket 499₺\'dir.',
   },
   {
-    question: 'Ne zaman teslim edilir?',
-    answer: 'Veri talepleriniz 1 ila 3 iş günü içinde teslim edilir. Veriler panelinize yüklenir ve kolayca indirilebilir. Süre istenilen işletme adedine göre değişkenlik gösterebilir.',
-  }
+    question: 'Abonelik paketini nereden satın almam gerekir?',
+    answer: 'Abonelik paketlerini Shopier üzerinden satın alabilirsiniz. Fiyatlandırma sayfasındaki "Satın Al" butonuna tıklayarak Shopier\'a yönlendirilirsiniz. Satın alımdan sonra 24 saat içinde hesabınız aktifleştirilir ve mail alacaksınız.',
+  },
+  {
+    question: 'Daha sonra otomatik para çekilir mi?',
+    answer: 'Hayır, otomatik para çekme yapılmaz. Satın aldığınız paketin lisans süresi sona erince eklenti kullanımınıza kapatılır. Tekrar abonelik alana kadar eklentiyi kullanamazsınız. Yeni paket satın almak tamamen size bağlıdır.',
+  },
+  {
+    question: 'Hangi tarayıcıda çalışır?',
+    answer: 'MapBot eklentisi özellikle Google Chrome tarayıcısında çalışır. Ayrıca tüm Chromium tabanlı tarayıcılarda (Microsoft Edge, Brave, Opera vb.) da çalışır. Chrome kullanmanızı öneriyoruz.',
+  },
+  {
+    question: 'İstediğim verileri toplaması kaç saat sürer?',
+    answer: 'İstediğiniz veri boyutuna göre veri toplama süresi değişkenlik gösterir. Örneğin İstanbul berber listesini yaklaşık 1 saatte çekerken, Türkiye geneli tüm berber listesi yaklaşık 13 saat sürer. Bu sürede sizin bir şey yapmanız gerekmez. Sadece bilgisayarın otomatik ekran koruyucu ve uyku özelliğini kapatmanız yeterli. Eklenti tam otomatik olarak çalışmasını tamamlar ve verileri indirilebilir formatta hazırlar. Tek tuş ile verileri indirirsiniz. Bu süre internet hızınız, işlemci ve RAM gibi faktörlere bağlı olarak değişkenlik gösterebilir.',
+  },
+  {
+    question: 'Excel olarak çıktı almam mümkün mü?',
+    answer: 'Verileri CSV formatında indiriyoruz. Microsoft Excel veya Google E-Tablolar\'da Dosya > İçeri Aktar > İndirdiğiniz CSV dosyasını seçerseniz otomatik Excel tablosu olarak açılacaktır. Tüm yazılımlar ile CSV uyumludur.',
+  },
 ];
 
 export default function FAQ() {

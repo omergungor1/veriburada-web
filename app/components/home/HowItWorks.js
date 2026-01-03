@@ -3,29 +3,29 @@ import Link from 'next/link';
 const steps = [
   {
     number: 1,
-    title: 'Hesap açın',
-    description: 'Hemen hesabınızı oluşturun.',
-    cta: 'Kayıt Ol',
-    ctaLink: 'https://app.veriburada.com/login',
+    title: 'Eklentiyi İndirin ve Kurun',
+    description: 'Eklentiyi indirin ve tarayıcınıza kurun. Kolay kurulum adımlarını takip edin.',
+    cta: 'Eklentiyi İndir',
+    ctaLink: '/eklenti-indir',
   },
   {
     number: 2,
-    title: 'Kredi yükleyin',
-    description: 'Kredi paketleri: 150, 1.000, 5.000, 10.000, 20.000, 50.000 kredi seçenekleri.',
+    title: 'Google Haritaları Açın',
+    description: 'Google Haritalar\'ı açın. Sağda MapBot eklentisini göreceksiniz.',
     cta: null,
     ctaLink: null,
   },
   {
     number: 3,
-    title: 'Veri siparişinizi oluşturun',
-    description: 'Hangi il, ilçedeki işletmeleri toplamak istediğinizi seçin ve siparişinizi oluşturun.',
+    title: 'Veri Toplamaya Başlayın',
+    description: 'Hangi ilde hangi işletme türlerini toplayacağınızı seçin, veri toplamaya başlayın.',
     cta: null,
     ctaLink: null,
   },
   {
     number: 4,
-    title: 'İşletme Listenizi İndirin',
-    description: 'Siparişiniz 1-3 gün içinde hazır, CSV veya VCF formatında indirin. (Süre istenilen işletme adedine göre değişkenlik gösterebilir)',
+    title: 'Verileri İndirin',
+    description: 'Eklenti çalışmaya başlayınca verileri otomatik olarak toplar. Tamamlanınca verileri indirin.',
     cta: null,
     ctaLink: null,
   },
@@ -66,10 +66,10 @@ export default function HowItWorks() {
         </div>
         <div className="text-center mt-12">
           <Link
-            href="https://app.veriburada.com/login"
+            href="/eklenti-indir"
             className="inline-block bg-[#7BC87B] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#5FA85F] transition-colors shadow-lg hover:shadow-xl"
           >
-            Hemen Başla
+            Eklentiyi İndir
           </Link>
         </div>
       </div>

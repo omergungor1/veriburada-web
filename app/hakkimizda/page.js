@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Hakkımızda - Veriburada',
-  description: 'Veriburada hakkında bilgiler. Misyonumuz, vizyonumuz ve değerlerimiz.',
+  description: 'Veriburada ve MapBot eklentisi hakkında bilgiler. Misyonumuz, vizyonumuz ve değerlerimiz.',
 };
 
 export default function HakkimizdaPage() {
@@ -15,17 +15,28 @@ export default function HakkimizdaPage() {
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <h2 className="text-2xl font-semibold text-[#111827] mb-4">Misyonumuz</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Veriburada olarak, Google Haritalardaki işletme verilerini hızlı, güvenilir ve uygun fiyatlı bir şekilde 
-              müşterilerimize sunmayı hedefliyoruz. İşletmelerin büyümesine katkı sağlayarak, Türkiye'deki veri 
-              ekosistemine değer katıyoruz.
+              Veriburada olarak, MapBot eklentisi ile Google Haritalar'daki işletme verilerini kolay, hızlı ve
+              otomatik bir şekilde toplamanızı sağlıyoruz. Sınırsız kullanım hakkı ile aylık abonelik modeli
+              sunarak, işletmelerin müşteri bulma süreçlerini kolaylaştırıyor ve büyümelerine katkı sağlıyoruz.
             </p>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <h2 className="text-2xl font-semibold text-[#111827] mb-4">Vizyonumuz</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Türkiye'nin en güvenilir ve kapsamlı işletme veri platformu olmak. Müşterilerimize en güncel ve 
-              doğru verileri sunarak, iş kararlarını desteklemek ve büyümelerine katkıda bulunmak.
+              Türkiye'nin en kullanıcı dostu ve güvenilir veri toplama eklentisi olmak. Müşterilerimize platform
+              bağımsız, sınırsız kullanım ve otomatik veri toplama özellikleri sunarak, iş kararlarını desteklemek
+              ve büyümelerine katkıda bulunmak.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 className="text-2xl font-semibold text-[#111827] mb-4">Neden MapBot Eklentisi?</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              MapBot eklentisi, Google Haritalar üzerinden direkt olarak işletme verilerini toplamanızı sağlayan
+              güçlü bir Chrome eklentisidir. Manuel veri toplama işlemlerinden kurtulun, zaman ve para tasarrufu
+              yapın. Windows ve macOS'ta sorunsuz çalışır, sınırsız kullanım hakkı ile istediğiniz kadar veri
+              toplayabilirsiniz.
             </p>
           </div>
 
@@ -42,7 +53,13 @@ export default function HakkimizdaPage() {
                 <svg className="w-6 h-6 text-[#7BC87B] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span><strong className="text-[#111827]">Hız:</strong> Siparişleriniz 24 saat içinde hazırlanır ve size teslim edilir.</span>
+                <span><strong className="text-[#111827]">Kolaylık:</strong> Eklenti kurulumu çok basit, tek tıkla veri toplamaya başlayın.</span>
+              </li>
+              <li className="flex items-start">
+                <svg className="w-6 h-6 text-[#7BC87B] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span><strong className="text-[#111827]">Otomasyon:</strong> Eklenti otomatik olarak çalışır, verileri toplar ve hazır hale getirir.</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-6 h-6 text-[#7BC87B] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">

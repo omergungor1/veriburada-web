@@ -42,6 +42,9 @@ export default function Header() {
             {/* <Link href="/icerik-merkezi" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               İçerik Merkezi
             </Link> */}
+            <Link href="/hakkimizda" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
+              Hakkımızda
+            </Link>
             <Link href="/iletisim" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               İletişim
             </Link>
@@ -85,6 +88,9 @@ export default function Header() {
             {/* <Link href="/icerik-merkezi" className="block text-gray-700 hover:text-[#7BC87B]">
               İçerik Merkezi
             </Link> */}
+            <Link href="/hakkimizda" className="block text-gray-700 hover:text-[#7BC87B]">
+              Hakkımızda
+            </Link>
             <Link href="/iletisim" className="block text-gray-700 hover:text-[#7BC87B]">
               İletişim
             </Link>
