@@ -36,12 +36,15 @@ export default function Header() {
             <Link href="/" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               Ana Sayfa
             </Link>
+            <Link href="/blog" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
+              Blog
+            </Link>
+            <Link href="/listeler" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
+              Listeler
+            </Link>
             <Link href="/pricing" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               Fiyatlandırma
             </Link>
-            {/* <Link href="/icerik-merkezi" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
-              İçerik Merkezi
-            </Link> */}
             <Link href="/hakkimizda" className="text-gray-700 hover:text-[#7BC87B] transition-colors">
               Hakkımızda
             </Link>

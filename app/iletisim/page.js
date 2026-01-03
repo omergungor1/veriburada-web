@@ -1,28 +1,17 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { useState } from 'react';
 
 export default function IletisimPage() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const recaptchaRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setLoading(true);
-
-    // reCAPTCHA token al
-    const recaptchaToken = recaptchaRef.current?.getValue();
-
-    if (!recaptchaToken) {
-      setError('Lütfen reCAPTCHA doğrulamasını tamamlayın');
-      setLoading(false);
-      return;
-    }
 
     try {
       // IP adresi ve user agent bilgilerini al
@@ -46,7 +35,6 @@ export default function IletisimPage() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          recaptchaToken,
           ipAddress,
           userAgent,
         }),
@@ -55,15 +43,15 @@ export default function IletisimPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Mesaj gönderilirken bir hata oluştu');
+        console.error('API hatası:', data);
+        const errorMessage = data.error || 'Mesaj gönderilirken bir hata oluştu';
+        throw new Error(errorMessage);
       }
 
       setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-      recaptchaRef.current?.reset();
     } catch (err) {
       setError(err.message || 'Mesaj gönderilirken bir hata oluştu');
-      recaptchaRef.current?.reset();
     } finally {
       setLoading(false);
     }
@@ -116,12 +104,6 @@ export default function IletisimPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7BC87B] focus:border-transparent resize-none"
-                    />
-                  </div>
-                  <div className="flex justify-center">
-                    <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                     />
                   </div>
                   {error && (
@@ -184,4 +166,3 @@ export default function IletisimPage() {
     </div>
   );
 }
-

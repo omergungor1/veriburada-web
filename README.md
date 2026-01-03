@@ -4,3 +4,10 @@ Made with ❤️
 -> nasıl kurulur
 -> abonelik satın alma
 -> 
+
+
+
+
+
+
+
