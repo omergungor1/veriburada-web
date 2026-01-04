@@ -53,22 +53,34 @@ export default async function sitemap() {
     ];
 
     // Blog yazıları
-    const blogPosts = await getBlogPosts();
-    const blogPages = blogPosts.map((post) => ({
-        url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: post.updated_at ? new Date(post.updated_at) : new Date(post.created_at),
-        changeFrequency: 'weekly',
-        priority: 0.8,
-    }));
+    let blogPages = [];
+    try {
+        const blogPosts = await getBlogPosts();
+        blogPages = blogPosts.map((post) => ({
+            url: `${baseUrl}/blog/${post.slug}`,
+            lastModified: post.updated_at ? new Date(post.updated_at) : new Date(post.created_at),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        }));
+    } catch (error) {
+        console.error('Error fetching blog posts for sitemap:', error);
+        // Hata durumunda boş array döndür, sitemap yine de oluşturulsun
+    }
 
     // Hazır veri listeleri
-    const readyLists = await getReadyLists();
-    const listPages = readyLists.map((list) => ({
-        url: `${baseUrl}/listeler/${list.slug}`,
-        lastModified: list.updated_at ? new Date(list.updated_at) : new Date(list.created_at),
-        changeFrequency: 'weekly',
-        priority: 0.8,
-    }));
+    let listPages = [];
+    try {
+        const readyLists = await getReadyLists();
+        listPages = readyLists.map((list) => ({
+            url: `${baseUrl}/listeler/${list.slug}`,
+            lastModified: list.updated_at ? new Date(list.updated_at) : new Date(list.created_at),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        }));
+    } catch (error) {
+        console.error('Error fetching ready lists for sitemap:', error);
+        // Hata durumunda boş array döndür, sitemap yine de oluşturulsun
+    }
 
     return [...staticPages, ...blogPages, ...listPages];
 }
