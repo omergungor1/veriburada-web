@@ -8,7 +8,7 @@ create table public.ex_contact_messages (
   created_at timestamptz not null default now()
 );
 
-create table public.blog_posts (
+create table public. (
   id uuid primary key default gen_random_uuid(),
   title text not null,
   slug text not null unique,
@@ -21,7 +21,7 @@ create table public.blog_posts (
 );
 
 
-create table public.ready_lists (
+create table public.ex_ready_lists (
   id uuid primary key default gen_random_uuid(),
   title text not null,
   slug text not null unique,
@@ -33,6 +33,18 @@ create table public.ready_lists (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+create table public.ex_extension_versions (
+  id uuid primary key default gen_random_uuid(),
+  version text not null,
+  release_notes text,
+  download_url text not null,
+  is_latest boolean not null default false,
+  created_at timestamptz not null default now(),
+  update_url text,
+)
+
+
 
 insert into storage.buckets (id, name, public)
 values ('ready-lists', 'ready-lists', true);

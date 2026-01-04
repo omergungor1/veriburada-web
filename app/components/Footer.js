@@ -23,7 +23,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/hazir-veri-listeleri" className="hover:text-white transition-colors">
+                <Link href="/listeler" className="hover:text-white transition-colors">
                   Hazır Listeler
                 </Link>
               </li>
@@ -33,8 +33,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/icerik-merkezi" className="hover:text-white transition-colors">
-                  İçerik Merkezi
+                <Link href="/blog" className="hover:text-white transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>
@@ -56,8 +56,8 @@ export default function Footer() {
             <ul className="space-y-2">
               {cities.map((city) => (
                 <li key={city}>
-                  <Link 
-                    href={`/sehir/${city.toLowerCase()}`} 
+                  <Link
+                    href={`/sehir/${city.toLowerCase()}`}
                     className="hover:text-white transition-colors"
                   >
                     {city} Listeleri
@@ -73,8 +73,8 @@ export default function Footer() {
             <ul className="space-y-2">
               {categories.map((category) => (
                 <li key={category.slug}>
-                  <Link 
-                    href={`/kategori/${category.slug}`} 
+                  <Link
+                    href={`/kategori/${category.slug}`}
                     className="hover:text-white transition-colors"
                   >
                     {category.name}
@@ -103,11 +103,6 @@ export default function Footer() {
                   Blog
                 </Link>
               </li>
-              <li>
-                <Link href="/case-studies" className="hover:text-white transition-colors">
-                  Vaka Çalışmaları
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
@@ -115,10 +110,10 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Veriburada. Tüm hakları saklıdır.
+              © {new Date().getFullYear()} VeriBurada. Tüm hakları saklıdır.
             </p>
             <p className="text-sm text-gray-400 mt-2 md:mt-0">
-              KVKK'ya uygun olarak verileriniz korunmaktadır.
+              Potansiyel müşteri bulmanın en kolay yolu.
             </p>
           </div>
         </div>

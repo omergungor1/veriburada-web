@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getBlogPosts, getBlogPostBySlug } from '@/lib/supabase';
 import { marked } from 'marked';
+import DownloadCTA from '@/app/components/DownloadCTA';
 
 // SSG için tüm slug'ları generate et
 export async function generateStaticParams() {
@@ -79,6 +80,9 @@ export default async function BlogPostPage({ params }) {
               dangerouslySetInnerHTML={{ __html: htmlContent }}
             />
           </div>
+
+          {/* CTA Section */}
+          <DownloadCTA />
         </article>
       </div>
     </div>

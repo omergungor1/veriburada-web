@@ -1,14 +1,27 @@
-'use client';
-
 import Link from 'next/link';
+import { getLatestExtensionVersion } from '@/lib/supabase';
+import CopyChromeUrl from '@/app/components/CopyChromeUrl';
 
-export default function EklentiIndirPage() {
-    const downloadLink = 'https://zpzoykdqnwdularrisfp.supabase.co/storage/v1/object/public/extension-builds/veriburada-mapbot-v1.2.0.zip';
-    const chromeExtensionsLink = 'chrome://extensions';
+function MapLink() {
+    return (
+        <>
+            <a
+                href="https://www.google.com/maps"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 font-semibold underline"
+            >
+                Google Haritaları
+            </a>
+            {' '}açın. Sağda MapBot eklentisini göreceksiniz.
+        </>
+    );
+}
 
-    const handleDownload = () => {
-        window.open(downloadLink, '_blank');
-    };
+export default async function EklentiIndirPage() {
+    const latestVersion = await getLatestExtensionVersion();
+    const downloadLink = latestVersion?.download_url || '#';
+    const version = latestVersion?.version || 'v1.0.0';
 
     const steps = [
         {
@@ -25,18 +38,11 @@ export default function EklentiIndirPage() {
             number: 3,
             title: 'Chrome Uzantılar Sayfasını Açın',
             description: (
-                <>
-                    Tarayıcınızın adres çubuğuna{' '}
-                    <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">chrome://extensions</code>{' '}
-                    yazın veya{' '}
-                    <a
-                        href={chromeExtensionsLink}
-                        className="text-blue-600 hover:underline font-semibold"
-                    >
-                        buraya tıklayın
-                    </a>
-                    .
-                </>
+                <div>
+                    <p className="mb-2">Tarayıcınızın adres çubuğuna aşağıdaki adresi yazın:</p>
+                    <CopyChromeUrl />
+                    <p className="mt-2 text-sm text-gray-600">Kopyaladıktan sonra adres çubuğuna yapıştırın ve Enter'a basın.</p>
+                </div>
             ),
         },
         {
@@ -54,6 +60,13 @@ export default function EklentiIndirPage() {
             title: 'Klasörü Seçin',
             description: 'Açılan pencerede, 2. adımda çıkarttığınız klasörü seçin ve "Klasör Seç" (Select Folder) butonuna tıklayın.',
         },
+        {
+            number: 7,
+            title: 'Google Haritaları Açın',
+            description: (
+                <MapLink />
+            ),
+        },
     ];
 
     return (
@@ -65,21 +78,22 @@ export default function EklentiIndirPage() {
                         VeriBurada MapBot Eklentisi
                     </h1>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Google Haritalar'dan işletme verilerini kolayca çıkarmanızı sağlayan güçlü Chrome eklentisi
+                        Google Haritalar'dan işletme verilerini kolayca indirmenizi sağlayan Chrome eklentisi
                     </p>
                 </div>
 
                 {/* Download Button */}
                 <div className="text-center mb-16">
-                    <button
-                        onClick={handleDownload}
-                        className="group bg-[#111827] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#1F2937] transition-all shadow-lg hover:shadow-xl flex items-center gap-3 justify-center mx-auto"
+                    <a
+                        href={downloadLink}
+                        download
+                        className="group cursor-pointer bg-[#111827] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#1F2937] transition-all shadow-lg hover:shadow-xl inline-flex items-center gap-3 justify-center mx-auto"
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                         </svg>
-                        <span>Eklentiyi İndir (v1.2.0)</span>
-                    </button>
+                        <span>Eklentiyi İndir ({version})</span>
+                    </a>
                     <p className="text-sm text-gray-500 mt-3">
                         Dosya boyutu: ~300 KB | Format: ZIP
                     </p>
@@ -129,15 +143,11 @@ export default function EklentiIndirPage() {
                             <ul className="text-gray-700 space-y-2 text-sm">
                                 <li className="flex items-start gap-2">
                                     <span className="text-blue-600 mt-1">•</span>
-                                    <span>Eklenti yalnızca Google Chrome tarayıcısında çalışmaktadır.</span>
+                                    <span>Eklentimiz Google Chrome, Microsoft Edge, Brave ve Opera tarayıcılarında çalışmaktadır.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-blue-600 mt-1">•</span>
-                                    <span>Kurulum sırasında Chrome'un uyarı mesajlarını görmezden gelebilirsiniz.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-blue-600 mt-1">•</span>
-                                    <span>Eklentiyi kullanmak için aktif bir VeriBurada hesabınız olmalıdır.</span>
+                                    <span>Eklentiyi açınca mail ile hesap oluşturmanız gerekmektedir.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-blue-600 mt-1">•</span>

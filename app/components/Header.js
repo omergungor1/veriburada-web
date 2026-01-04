@@ -53,13 +53,16 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Auth Buttons */}
+          {/* Eklenti İndir Butonu */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="https://app.veriburada.com/login"
-              className="bg-[#7BC87B] text-white px-4 py-2 rounded-lg hover:bg-[#5FA85F] transition-colors"
+              href="/eklenti-indir"
+              className="bg-[#7BC87B] text-white px-4 py-2 rounded-lg hover:bg-[#5FA85F] transition-colors flex items-center gap-2"
             >
-              Giriş Yap
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Eklentiyi İndir
             </Link>
           </div>
 
@@ -99,10 +102,13 @@ export default function Header() {
             </Link>
             <div className="pt-4 border-t space-y-2">
               <Link
-                href="https://app.veriburada.com/login"
-                className="block text-gray-700 hover:text-[#7BC87B]"
+                href="/eklenti-indir"
+                className="block bg-[#7BC87B] text-white px-4 py-2 rounded-lg hover:bg-[#5FA85F] transition-colors text-center flex items-center justify-center gap-2"
               >
-                Giriş Yap
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Eklentiyi İndir
               </Link>
             </div>
           </div>
