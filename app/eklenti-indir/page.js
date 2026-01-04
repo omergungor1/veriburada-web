@@ -123,9 +123,9 @@ export default async function EklentiIndirPage() {
                                     <h3 className="text-xl font-semibold text-[#111827] mb-2">
                                         {step.title}
                                     </h3>
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <div className="text-gray-600 leading-relaxed">
                                         {step.description}
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         ))}

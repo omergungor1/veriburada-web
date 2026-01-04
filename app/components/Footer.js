@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Şehir Bazlı Linkler */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold mb-4">Şehir Listeleri</h3>
             <ul className="space-y-2">
               {cities.map((city) => (
@@ -65,10 +65,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Kategori Bazlı Linkler */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold mb-4">Kategori Listeleri</h3>
             <ul className="space-y-2">
               {categories.map((category) => (
@@ -82,7 +82,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Hukuki & Bilgi */}
           <div>
@@ -96,6 +96,11 @@ export default function Footer() {
               <li>
                 <Link href="/gizlilik-politikasi" className="hover:text-white transition-colors">
                   Gizlilik Politikası
+                </Link>
+              </li>
+              <li>
+                <Link href="/sitemap.xml" className="hover:text-white transition-colors">
+                  Sitemap
                 </Link>
               </li>
               <li>

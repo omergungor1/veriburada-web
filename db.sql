@@ -8,7 +8,7 @@ create table public.ex_contact_messages (
   created_at timestamptz not null default now()
 );
 
-create table public. (
+create table public.ex_blog_posts (
   id uuid primary key default gen_random_uuid(),
   title text not null,
   slug text not null unique,

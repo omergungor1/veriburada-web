@@ -131,13 +131,13 @@ export default function Hero() {
           {/* Left Side - Text Content */}
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#111827] mb-6 leading-tight relative">
-              Google haritalardaki{' '}
-              <span className="text-[#7BC87B]">tüm işletmeler</span>{' '}
-              elinizde
+              Google Haritalar'daki{' '}
+              <span className="text-[#7BC87B]">milyonlarca işletmeyi</span>{' '}
+              liste olarak indirin
             </h1>
 
             <p className="text-xl text-gray-600 mb-8">
-              Google Haritalar'daki milyonlarca işletmeyi liste olarak indirin. Türkiye genelinde 2M+ işletme verisi, telefon numarası, adres ve iletişim bilgilerine tek tıkla erişin. Hızlı, güncel ve doğru verilerle işinizi büyütün.
+              Google haritalardaki tüm işletmeler elinizde! Türkiye genelinde 2M+ işletme verisi, telefon numarası, adres ve iletişim bilgilerine tek tıkla erişin. Hızlı, güncel ve doğru verilerle işinizi büyütün.
             </p>
 
             {/* CTA Buttons */}
